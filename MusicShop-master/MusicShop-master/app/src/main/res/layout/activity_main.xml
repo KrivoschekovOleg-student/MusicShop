@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/userNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your name"
+        android:minHeight="48dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/fon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:rotation="-20"
+            android:layout_centerInParent="true"
+            android:text="Sale 30%"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Item"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_marginEnd="20dp"
+        android:layout_gravity="end" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/goodsImageView"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/gitary" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/priceTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Order Price"
+            android:textColor="@color/black"
+            android:layout_marginStart="20dp" />
+
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/priceTitleTextView"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/currencyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/priceTitleTextView"
+            android:layout_toRightOf="@id/priceTextView"
+            android:textStyle="bold"
+            android:text="$"
+            android:textColor="@color/black"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/quantityTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="110dp"
+            android:layout_toRightOf="@id/priceTitleTextView"
+            android:text="Quantity"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/minusButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/quantityTitleTextView"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="170dp"
+            android:layout_marginTop="5dp"
+            android:onClick="decreaseQuantity"
+            android:text="-"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/quantityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/black"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/minusButton"
+            android:layout_below="@id/priceTitleTextView"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/plusButton"
+            android:onClick="increaseQuantity"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@id/quantityTextView"
+            android:layout_below="@id/quantityTitleTextView"
+            android:textColor="@color/white"
+            android:text="+"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add to Card"
+        android:onClick="AddToCard"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="20dp" />
+
+</LinearLayout>
